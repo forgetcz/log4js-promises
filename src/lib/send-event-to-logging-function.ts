@@ -15,8 +15,8 @@ import { isLogEnabledByMinMaxLevel } from './is-log-enabled-by-category';
  *
  * @export
  * @param {ICategoryConfiguration} category { category : {...}} part of configuration
- * @param {ILoggingEvent} loggingEvent
- * @param {IConfiguration} config
+ * @param {ILoggingEvent} loggingEvent Event from debug/info/warning/error message
+ * @param {IConfiguration} config Full log4js-promise configuratiom
  * @param {Map<string, TLoggingFunction>} loggingFunctions
  * @return {Promise<ILoggingFunctionResponse>[]}
  */

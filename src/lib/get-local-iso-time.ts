@@ -1,5 +1,5 @@
 /**
- * @description
+ * @description Get local date as string
  *
  * @export
  * @param {Date} inputDate
@@ -15,7 +15,9 @@ export function getLocalIsoDateTime(inputDate: Date): string {
     return localISOTime;
 }
 
+/*
 if (require.main === module) {
     const s = getLocalIsoDateTime(new Date());
     console.debug(s);
 }
+*/

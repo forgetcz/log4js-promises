@@ -19,7 +19,8 @@ import { createGzip } from 'node:zlib';
 const pipe = promisify(pipeline);
 
 /**
- * https://nodejs.org/api/zlib.html
+ * @description Create gzip file
+ * @see https://nodejs.org/api/zlib.html
  *
  * @export
  * @param {string} inputFile

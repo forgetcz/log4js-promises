@@ -25,6 +25,10 @@ let localLayoutFunction: TLayoutFunction | undefined;
 /** @description / */
 const pathSeparator = path.sep;
 
+/**
+ * @description Create full directory tree for localDirName
+ * @returns
+ */
 async function createDirectoryTree(): Promise<void> {
     // const existsAsync = util.promisify(fs.existsSync);
     // const mkdirAsync = util.promisify(fs.mkdirSync);
@@ -174,7 +178,6 @@ async function loggingEvent(
 export const fileAppender: IAppender = {
     configure: function (
         appenderConfig: IAbstractAppenderConfiguration,
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         layoutFunction: TLayoutFunction | undefined,
     ): TLoggingFunction {
         localAppenderConfig = appenderConfig as IFileAppenderConfiguration;

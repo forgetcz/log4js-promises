@@ -41,14 +41,15 @@ const layoutsConfiguration = new Map<
 /** @description List of loaded layout functions (= result of init layout) */
 const layoutsFunctions = new Map<string, TLayoutFunction>();
 
-/** @description List of errors in last hour */
+/** @description List of errors in last process */
 export const errorList: IErrorItem[] = [];
 
-/** @description Project root dir */
+/** @description Project root dir (dist as default) */
 export let projectRootDir = __dirname;
 
 /**
- * @description Set project root dir (used for logging root path)
+ * @description Set project root dir (used for logging root path - file appender using this for directory setting)
+ *      to redirect from dist to root of project
  *
  * @export
  * @param {string} rootDir Root dir to set
@@ -58,7 +59,7 @@ export function setRootDir(rootDir: string): void {
 }
 
 /**
- * @description Error message from process
+ * @description Add error message from process to list of errors list summary (printed in next step)
  *
  * @export
  * @param {Error} message
@@ -74,6 +75,10 @@ export function addItemToErrList(message: Error): void {
 
 let isInitialized = false;
 
+/**
+ * @description Basic function to configure appliacation
+ * @param {IConfiguration} config
+ */
 export async function configureLogger(config: IConfiguration): Promise<void> {
     if (isAbstractConfiguration(config)) {
         throw new Error(
@@ -101,7 +106,7 @@ export async function configureLogger(config: IConfiguration): Promise<void> {
 }
 
 /**
- * @description Add layout function to stack
+ * @description Add layout function (formater) to list of layout functions
  *
  * @export
  * @param {string} [layoutTypeName='']
@@ -122,7 +127,7 @@ export function addLayout(
 }
 
 /**
- * @description Get category level
+ * @description Get logger for requested category
  *
  * @export
  * @param {string} [category='default']

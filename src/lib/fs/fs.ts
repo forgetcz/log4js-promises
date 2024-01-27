@@ -9,6 +9,11 @@ export interface FileStat {
     lastStatusChange: Date;
 }
 
+/**
+ * @description Get file information about file
+ * @param {string} filepath Full file path to file we want to get information about
+ * @returns {FileStat}
+ */
 export async function getFileDateStat(filepath: string): Promise<FileStat> {
     // const statPromise = util.promisify(fs.stat);
     const stats = await fsPromises.stat(filepath);

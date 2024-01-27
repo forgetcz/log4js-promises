@@ -1,6 +1,6 @@
 {
-    "name": "log4js-node-next",
-    "version": "1.0.29",
+    "name": "log4js-promises",
+    "version": "1.0.0",
     "description": "Promised based and no require use one of popular logging framework (full ready for esnext/node next)",
     "main": "./dist/index.js",
     "types": "./dist/types/types.d.ts",

@@ -1,7 +1,7 @@
 import { ILogLevel } from '../types/types';
 
 /**
- * @description Returns if level is in interval
+ * @description Returns true/false based on input levels in interval
  *
  * @export
  * @param {ILogLevel} requiredLevel
