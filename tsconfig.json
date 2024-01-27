@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+        //Language and Environment, https://www.typescriptlang.org/tsconfig
+        "target": "ES6",
+        "lib": ["es2017", "dom", "ES2021.String"],
+
+        // Type Checking
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "rootDir": "src",
+        "noFallthroughCasesInSwitch": true,
+
+        // Modules
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+
+        // EMIT
+        "outDir": "dist",
+        "removeComments": false,
+        "sourceMap": true,
+        "declaration": true,
+
+        // JavaScript Support
+        "checkJs": true,
+        "allowJs": true,
+
+        // Output Formatting
+        "pretty": true,
+
+        // Completeness
+        "skipLibCheck": true
+    },
+    "include": ["src/**/*", "types/**/*"],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "**/__tests__/*",
+        "**/*__mocks__*"
+    ]
+}

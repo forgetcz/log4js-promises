@@ -1,0 +1,38 @@
+{
+    "name": "log4js-node-next",
+    "version": "1.0.28",
+    "description": "Promised based and no require use one of popular logging framework (full ready for esnext/node next)",
+    "main": "./dist/index.js",
+    "types": "./dist/types/types.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "lint": "eslint . --ext .js,.jsx,.ts",
+        "lintFix": "eslint . --ext .js,.jsx,.ts --fix",
+        "prettier": "npx prettier --write ./src/**/*.{ts,js}",
+        "prettierFix": "npx prettier --write ./src/**/*.{ts,js} --fix",
+        "build": "npm run lint && rm -rf ./dist && npx tsc",
+        "removeW": "RMDIR /S /Q dist",
+        "buildW": "npm run lint && npm run prettier && npm run removeW && npx tsc"
+    },
+    "contributors": [
+        "forget@seznam.cz"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/log4js-ts/..."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.10.2",
+        "@typescript-eslint/eslint-plugin": "^6.12.0",
+        "@typescript-eslint/parser": "^6.12.0",
+        "eslint": "^8.54.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "typescript": "^5.3.2"
+    }
+}
