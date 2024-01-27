@@ -16,3 +16,4 @@ Example of custom appenders is here:
 
 -   [log4js-appender-google-hangout]()
 -   [log4js-db-mongodb-esnext]
+-   [log4js-appender-rest]

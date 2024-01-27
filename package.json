@@ -2,6 +2,7 @@
     "name": "log4js-promises",
     "version": "1.0.0",
     "description": "Promised based and no require use one of popular logging framework (full ready for esnext/node next)",
+    "homepage": "https://github.com/forgetcz/log4js-promises",
     "main": "./dist/index.js",
     "types": "./dist/types/types.d.ts",
     "files": [
@@ -16,15 +17,12 @@
         "removeW": "RMDIR /S /Q dist",
         "buildW": "npm run lint && npm run prettier && npm run removeW && npx tsc"
     },
-    "contributors": [
-        "forget@seznam.cz"
-    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/forgetcz/log4js-promises"
     },
     "keywords": [],
-    "author": "",
+    "author": "forget@seznam.cz",
     "license": "ISC",
     "devDependencies": {
         "@types/node": "^20.11.7",
