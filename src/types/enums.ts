@@ -1,3 +1,6 @@
+/**
+ * @description Allowed colors for
+ */
 export enum eValidColors {
     white = 'white',
     grey = 'grey',
@@ -9,7 +12,9 @@ export enum eValidColors {
     red = 'red',
     yellow = 'yellow',
 }
-
+/**
+ * @description List of level names for debuggig
+ */
 export enum eLevelName {
     ALL = 'ALL',
     TRACE = 'TRACE',
@@ -22,6 +27,7 @@ export enum eLevelName {
     OFF = 'OFF',
 }
 
+/** @description list of core defined appenders */
 export enum eCoreAppenderType {
     console = 'console',
     file = 'file',
