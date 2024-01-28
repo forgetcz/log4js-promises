@@ -87,9 +87,9 @@ export function parseConfigurationCategoriesSection(
                         strData += JSON.stringify(dataItem, undefined, 4);
                     }
 
-                    // [2023-09-22T04:57:28.627Z] [INFO] default - Server is running: ..
+                    // [2023-09-22T04:57:28.627Z] [INFO] [default] - Server is running: ..
                     const strDate = getLocalIsoDateTime(loggingEvent.startTime);
-                    strData = `[${strDate}] [${loggingEvent.level}] ${loggingEvent.categoryName} - ${strData}`;
+                    strData = `[${strDate}] [${loggingEvent.level}] [${loggingEvent.categoryName}] - ${strData}`;
 
                     return strData;
                 },

@@ -2,7 +2,7 @@ import { IAbstractAppenderConfiguration } from '../types/types';
 
 /**
  * @description Test if input object is type of configuration (atribut type is present)
- *  If configuration do not includes type, then this is not valid configuration
+ *  If configuration do not includes filed 'type', then this is not valid configuration.
  *
  * @export
  * @param {*} configuration

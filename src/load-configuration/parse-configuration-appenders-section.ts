@@ -19,7 +19,7 @@ import {
  *
  * @export
  * @param {IConfiguration} config Full config
- * @param {Map<string, TLayoutFunction>} layoutsFunctions
+ * @param {Map<string, TLayoutFunction>} layoutsFunctions List of layout configuration allready registred on system. This must be known before config is loaded !!!
  * @param {Map<string, TLoggingFunction>} loggingFunctions
  * @return {Promise<Map<string, IAppender>>}
  */

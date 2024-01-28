@@ -100,7 +100,7 @@ export interface ILoggingEvent {
     layoutTransformation?: any;
     error?: Error;
 
-    /** @description Basic toString() function: [2023-09-22T04:57:28.627] [INFO] default - Server is running: .. */
+    /** @description Basic toString() function: [2023-09-22T04:57:28.627] [INFO] [default] - Server is running: .. */
     toString: () => string;
 }
 

@@ -15,19 +15,19 @@ let localAppenderConfig: LogLevelFilterAppenderConfiguration;
 async function loggingEvent(
     loggingEvent: ILoggingEvent,
 ): Promise<ILoggingFunctionResponse> {
-    // eslint-disable-next-line no-self-assign
     const nextLayoutFnc = loggingFunctions.get(localAppenderConfig.appender);
 
     if (nextLayoutFnc) {
-        const next = await nextLayoutFnc(loggingEvent);
+        const nextLoggerResponse = await nextLayoutFnc(loggingEvent);
 
         return {
             loggerName: localAppenderConfig.type,
             loggerResponse: {
                 event: loggingEvent,
-                layoutTransformation: next.loggerResponse?.layoutTransformation,
+                layoutTransformation:
+                    nextLoggerResponse.loggerResponse?.layoutTransformation,
             },
-            error: next.error,
+            error: nextLoggerResponse.error,
         };
     } else {
         return {

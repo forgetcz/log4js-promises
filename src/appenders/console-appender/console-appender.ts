@@ -28,8 +28,10 @@ async function logEvent(
             },
         };
     } else {
-        const strData: string = loggingEvent.toString();
-        consoleLog(strData);
+        const messageColor = loggingEvent.level.color;
+        const strData: string = `%c` + loggingEvent.toString();
+
+        consoleLog(strData, `color: ${messageColor}`);
 
         return {
             loggerName: localAppenderConfig.type,

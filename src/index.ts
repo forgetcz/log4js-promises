@@ -1,10 +1,6 @@
 // import esMain from 'es-main'; "es-main": "^1.3.0"
 
-import {
-    Level,
-    logLevels as internalLogLevels,
-    logLevels,
-} from './classes/level';
+import { Level, logLevels } from './classes/level';
 import { getLocalIsoDateTime } from './lib/get-local-iso-time';
 import { isAbstractConfiguration } from './lib/is-abstract-configuration';
 import { printErrors } from './lib/print-errors';
@@ -174,7 +170,44 @@ export { IAppender, Level, TLayoutFunction, TLoggingFunction, logLevels };
 // https://stackoverflow.com/questions/45136831/node-js-require-main-module
 if (require.main === module) {
     // if (esMain(import.meta)) {
-
+    configureLogger({
+        appenders: {
+            consoleAppender: {
+                type: eCoreAppenderType.console,
+                layout: {
+                    type: 'COLORED_CONSOLE',
+                    appName: 'appName',
+                    source: 'develop',
+                    static: {
+                        env: {
+                            host: 'config.http.balancerHost',
+                        },
+                    },
+                    stringFormat: {
+                        colors: true,
+                    },
+                },
+            },
+            consoleAppenderByLevel: {
+                type: eCoreAppenderType.logLevelFilter,
+                appender: 'consoleAppender',
+                monLevel: logLevels.DEBUG,
+                maxLevel: logLevels.ERROR,
+            },
+        },
+        categories: {
+            default: {
+                appenders: ['consoleAppender'],
+            },
+        },
+    })
+        .then(() => {
+            const logger = getLogger();
+            logger.warn('This is a message');
+        })
+        .catch((err) => {
+            console.debug(err);
+        });
     /*
     configureLogger({
         appenders: {
@@ -278,6 +311,7 @@ if (require.main === module) {
         },
     });
     */
+    /*
     configureLogger({
         appenders: {
             consoleAppender: {
@@ -304,6 +338,8 @@ if (require.main === module) {
             },
         },
     });
+
+    */
     /*
     addLayoutFunction('', () => {
         return '';
