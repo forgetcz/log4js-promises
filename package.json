@@ -1,6 +1,6 @@
 {
-    "name": "log4js-promises",
-    "version": "1.0.0",
+    "name": "log4js-node-next",
+    "version": "1.0.30",
     "description": "Promised based and no require use one of popular logging framework (full ready for esnext/node next)",
     "homepage": "https://github.com/forgetcz/log4js-promises",
     "main": "./dist/index.js",

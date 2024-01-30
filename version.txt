@@ -1,0 +1,1 @@
+Original as : log4js-node-next 1.0.30

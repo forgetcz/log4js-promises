@@ -18,6 +18,10 @@ The full documentation is available [here](https://github.com/forgetcz/log4js-pr
 -   [log4js-appender-mongodb](https://www.npmjs.com/package/log4js-appender-mongodb)
 -   [log4js-appender-google-hangout](https://www.npmjs.com/package/og4js-appender-google-hangout)
 
+# Layout formating is also possible here
+
+-   [log4js-layouts](https://www.npmjs.com/package/log4js-layouts)
+
 # Simple example
 
 ```bash
