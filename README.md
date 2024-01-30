@@ -15,8 +15,8 @@ The full documentation is available [here](https://github.com/forgetcz/log4js-pr
 # Example of custom appenders:
 
 -   [log4js-appender-rest](https://www.npmjs.com/package/og4js-appender-rest)
--   [log4js-appender-mongodb](https://www.npmjs.com/package/log4js-appender-mongodb)
--   [log4js-appender-google-hangout](https://www.npmjs.com/package/og4js-appender-google-hangout)
+-   [log4js-db-mongodb-esnext](https://www.npmjs.com/package/log4js-db-mongodb-esnext)
+-   [log4js-appender-google-hangout](https://www.npmjs.com/package/log4js-appender-google-hangout)
 
 # Layout formating is also possible here
 
